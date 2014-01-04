@@ -1,0 +1,25 @@
+
+require 'rake-pipeline-web-filters'
+
+# Set the Pipeline's output directory
+output "compiled"
+
+# input defines operations on a set of files. All files processed in
+# this block go into the output directory
+input "source" do
+
+  # Select all the CSS files
+  match "css/**/*.css" do
+
+    # concatenate all files in directory into a file named
+    # "application.css"
+    concat "application.css"
+  end
+  match "javascript/**/*.coffee" do
+    coffee_script
+  end
+  match "javascript/**/*.js" do
+    es6_module
+    concat "application.js"
+  end
+end
