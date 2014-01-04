@@ -19,7 +19,7 @@ input "source" do
     coffee_script
   end
   match "javascript/**/*.js" do
-    es6_module
+    es6_module type: "globals", global: "testing"
     concat "application.js"
   end
 end
