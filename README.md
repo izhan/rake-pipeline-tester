@@ -9,7 +9,7 @@ To test, run
 
     $ rakep
      
-in the command line.  With the current configuration, it will take javascript or coffeescript files nested under source/javscript and compile it using Square's [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler), with the globals option enabled.  Your compiled code will appear as compiled/application.js
+in the command line.  With the current configuration, it will take javascript or coffeescript files nested under `source/javscript` and compile it using Square's [ES6 Module Transpiler](https://github.com/square/es6-module-transpiler), with the globals option enabled.  Your compiled code will appear as `compiled/application.js`
 
 You may modify the Assetfile to test out different options.  For any bugs, please submit a PR to any of the repositories linked to above.  Fiddle around with the rake pipeline as well -- it's a great tool for both css and javascript files!
 
