@@ -19,7 +19,7 @@ input "source" do
     coffee_script
   end
   match "javascript/**/*.js" do
-    es6_module type: "globals", global: "testing"
+    es6_module global: "testing", module_id_generator: proc { |input| "octopus" }
     concat "application.js"
   end
 end
